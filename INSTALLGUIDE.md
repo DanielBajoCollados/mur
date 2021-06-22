@@ -13,7 +13,7 @@
 #### Configurar los repositorios de ubuntu
 Desde la aplicación de ubuntu "Software y actualizaciones", en la ventana "Software de Ubuntu" se deben activar las opciones para Software libre y abierto mantenido por la comunidad (universe), para Controladores privativos para dispositivos (restricted) y para Software restringido por copyright o cuestiones legales (multiverse), tal y como se muestra en la siguiente imagen.
 
-![Software & Updates tabs](/Captura de pantalla de 2021-06-22 16-32-39.png)
+![Software & Updates tabs](Captura de pantalla de 2021-06-22 16-32-39.png)
 
 ### 2.2. Rviz
 
