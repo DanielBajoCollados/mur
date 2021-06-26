@@ -30,7 +30,7 @@ curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo ap
 ```
 
 Es posible que no esté instalado curl.
-Para ello es necesario usar el siguietne código:
+Para ello es necesario usar el siguiente código:
 
 ```
 sudo apt install curl
@@ -51,9 +51,21 @@ Reading package lists... Done
 Building dependency tree
 Reading state information... Done
 The following additional packages will be installed:
+autoconf automake autopoint autotools-dev binfmt-support blt 
+build-essential bzip2-doc cmake cmake-data cython debhelper
+default-libmysqlclient-dev dh-autoreconf dh-python dh-strip-nondeterminism
+docutils-common docutils-doc dpkg-dev fakeroot fltk1.3-doc fluid fonts-lato
+fonts-lyx freeglut3 freeglut3-dev g++ g++-7 gazebo9 gazebo9-common
+gazebo9-plugin-base gcc gcc-4.8-base gcc-7 gdal-data gir1.2-gtk-2.0
 .
 .
 The following packages will be upgraded:
+libc6 libc6-dbg libexif12 libfreetype6 libglib2.0-0 libglib2.0-bin
+libldap-2.4-2 libldap-common liblz4-1 libopenexr22 libpoppler-glib8
+libpoppler73 libpython2.7 libpython2.7-minimal libpython2.7-stdlib
+libpython3.6 libpython3.6-minimal libpython3.6-stdlib libssl1.1 libtiff5
+libuuid1 libwebp6 libwebpdemux2 libwebpmux3 libx11-6 libx11-xcb1 libxml2
+poppler-utils python3.6 python3.6-minimal
 .
 .
 Need to get 504 MB/527 MB of archives.
@@ -61,10 +73,10 @@ After this operation, 2.258 MB of additional disk space will be used.
 Do you want to continue? [Y/n]
 ```
 
-Tras aceptar, se terminará de instalar.
+Tras aceptar, se completará la instalación.
 
 #### Configuración del entorno
-Tal y como se recomienda desde ROS, es conveniente que las variables de entorno se añadan aautomáticamente con cada sesión que se abra del shell.
+Tal y como se recomienda desde la página de ROS, es conveniente que las variables de entorno se añadan aautomáticamente con cada sesión que se abra del shell.
 Para ello se debe usar el siguiente código:
 
 ```
@@ -83,8 +95,27 @@ sudo apt install python-rosdep python-rosinstall python-rosinstall-generator pyt
 Tras ello debería aparecer algo similar en la consola:
 
 ```
-
+python-rosinstall-generator python-wstool build-essential
+[sudo] password for user: 
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+build-essential is already the newest version (12.4ubuntu1).
+build-essential set to manually installed.
+The following additional packages will be installed:
+bzr git git-man liberror-perl libserf-1-1 libsvn1 mercurial
+mercurial-common python-bzrlib python-configobj python-crypto python-dbus
+python-gi python-httplib2 python-keyring python-keyrings.alt
+.
+.
+.
+0 upgraded, 29 newly installed, 0 to remove and 240 not upgraded.
+Need to get 11,7 MB of archives.
+After this operation, 69,2 MB of additional disk space will be used.
+Do you want to continue? [Y/n]
 ```
+
+Tras aceptar se completará la instalación.
 
 Como se puede ver, también se ha instalado *rosdep*, que permite instalar dependencias del sistema para compilar códigos. De hecho, es necesario para algunos componentes de ROS, por lo que es necesario inicializarlo antes de usar las herramientas que ofrece ROS.
 Para ello se debe usar el siguiente código:
@@ -97,13 +128,36 @@ rosdep update
 Tras introducir esos comandos debería aparecer algo similar en la consola:
 
 ```
-
+reading in sources list data from /etc/ros/rosdep/sources.list.d
+Hit https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/osx-homebrew.yaml
+Hit https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/base.yaml
+.
+.
+.
+Add distro "noetic"
+Add distro "rolling"
+updated cache in /home/user/.ros/rosdep/sources.cache
 ```
 
 ### 2.2. Rviz
-Para controlar a UDROBOT es necesario también *rviz*.
+Para controlar el robot submarino UDROBOT es necesario también *rviz*.
 *rviz* es un paquete de ROS que permite la visualización 3D. Además de mostrar el modelo del robot, es capaz de capturar datos de sus sensores y mostrarlos por pantalla.
 
+Para instalarlo es necesario el siguietne código:
 
+```
+sudo apt-get install ros-melodic-rviz
+```
+
+Tras introducir el siguiente comando debería obtenerse el siguiente resultado por consola.
+
+```
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+ros-melodic-rviz is already the newest version (1.13.17-1bionic.20210505.041235).
+ros-melodic-rviz set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 240 not upgraded.
+```
 
 ### 2.3. Repositorio Robot Submarino UDROBOT
