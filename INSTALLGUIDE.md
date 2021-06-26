@@ -29,6 +29,13 @@ Para configurar las llaves es necesario usar el siguiente código:
 curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
 ```
 
+Es posible que no esté instalado curl.
+Para ello es necesario usar el siguietne código:
+
+```
+sudo apt install curl
+```
+
 #### Instalción
 Una vez completa la configuración inicial es posible realizar la instalación.
 Se recomienda la instalación completa de escritorio con el siguiente código:
@@ -40,8 +47,21 @@ sudo apt install ros-melodic-desktop-full
 Tras introducir el comando debería aprecer un mensaje similar al siguiente:
 
 ```
-
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following additional packages will be installed:
+.
+.
+The following packages will be upgraded:
+.
+.
+Need to get 504 MB/527 MB of archives.
+After this operation, 2.258 MB of additional disk space will be used.
+Do you want to continue? [Y/n]
 ```
+
+Tras aceptar, se terminará de instalar.
 
 #### Configuración del entorno
 Tal y como se recomienda desde ROS, es conveniente que las variables de entorno se añadan aautomáticamente con cada sesión que se abra del shell.
