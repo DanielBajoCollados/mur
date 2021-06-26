@@ -23,14 +23,67 @@ sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main
 ```
 
 #### Configurar las llaves
-Para configurar las llaves es necesario usar el siguiente código
+Para configurar las llaves es necesario usar el siguiente código:
 
 ```
 curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
 ```
 
+#### Instalción
+Una vez completa la configuración inicial es posible realizar la instalación.
+Se recomienda la instalación completa de escritorio con el siguiente código:
 
+```
+sudo apt install ros-melodic-desktop-full
+```
+
+Tras introducir el comando debería aprecer un mensaje similar al siguiente:
+
+```
+
+```
+
+#### Configuración del entorno
+Tal y como se recomienda desde ROS, es conveniente que las variables de entorno se añadan aautomáticamente con cada sesión que se abra del shell.
+Para ello se debe usar el siguiente código:
+
+```
+echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+```
+
+#### Instalación de dependencias
+*rosinstall* es un comando comundmente utilizado para descargar con facilidad otros paquetes de ROS.
+Para instalarlo se usa el siguiente código:
+
+```
+sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential
+```
+
+Tras ello debería aparecer algo similar en la consola:
+
+```
+
+```
+
+Como se puede ver, también se ha instalado *rosdep*, que permite instalar dependencias del sistema para compilar códigos. De hecho, es necesario para algunos componentes de ROS, por lo que es necesario inicializarlo antes de usar las herramientas que ofrece ROS.
+Para ello se debe usar el siguiente código:
+
+```
+sudo rosdep init
+rosdep update
+```
+
+Tras introducir esos comandos debería aparecer algo similar en la consola:
+
+```
+
+```
 
 ### 2.2. Rviz
+Para controlar a UDROBOT es necesario también *rviz*.
+*rviz* es un paquete de ROS que permite la visualización 3D. Además de mostrar el modelo del robot, es capaz de capturar datos de sus sensores y mostrarlos por pantalla.
+
+
 
 ### 2.3. Repositorio Robot Submarino UDROBOT
