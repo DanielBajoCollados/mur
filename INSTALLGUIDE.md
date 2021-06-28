@@ -13,7 +13,7 @@
 #### Configurar los repositorios de ubuntu
 Desde la aplicación de ubuntu "Software y actualizaciones", en la ventana "Software de Ubuntu" se deben activar las opciones para Software libre y abierto mantenido por la comunidad (universe), para Controladores privativos para dispositivos (restricted) y para Software restringido por copyright o cuestiones legales (multiverse), tal y como se muestra en la siguiente imagen.
 
-![Captura de pantalla de 2021-06-22 16-32-39](https://raw.githubusercontent.com/DanielBajoCollados/mur/master/Captura%20de%20pantalla%20de%202021-06-22%2016-32-39.png)
+![software&updates](https://raw.githubusercontent.com/DanielBajoCollados/mur/master/software%26updates.png)
 
 #### Configurar sources.list
 Para configurar el prdenador para que acepte software de packages.ros.org es necesario escribir el siguiente código:
@@ -161,3 +161,29 @@ ros-melodic-rviz set to manually installed.
 ```
 
 ### 2.3. Repositorio Robot Submarino UDROBOT
+Una vez instalados ROS melodic y rviz, es necesario clonar el repositorio de UDROBOT en el equipo.
+Éste se puede encontrar en: [Go to the Support Web Site](https://github.com/juanscelyg/mur)
+
+Para ello se comenzará haciendo un fork del repositorio. Para ello sólo es necesario pulsar el botón de fork de la esquina superior derecha, tal y como se muestra en la imagen.
+![Fork](https://raw.githubusercontent.com/DanielBajoCollados/mur/master/Fork.jpeg)
+
+Una vez hecho el fork, desde el nuevo repositorio, puedes descargar el código en formato zip pulsando el botón verde en el que pone "Code" o clonándolo en una carpeta en el equipo usando en la consola git-clone y el enlace del repositorio. El código debería ser similar al siguiente:
+
+```
+git clone https://github.com/GithubUserName/mur.git
+```
+
+Tras ello debería aparece el siguiente mensaje por consola:
+
+```
+Clonando en 'mur'...
+remote: Enumerating objects: 1529, done.
+remote: Counting objects: 100% (213/213), done.
+remote: Compressing objects: 100% (146/146), done.
+remote: Total 1529 (delta 115), reused 139 (delta 58), pack-reused 1316
+Recibiendo objetos: 100% (1529/1529), 13.49 MiB | 1.50 MiB/s, listo.
+Resolviendo deltas: 100% (977/977), listo.
+```
+
+Una vez completado aparecerá una carpeta con el nombre "mur" en el directorio en el que se haya hecho git clone.
+
