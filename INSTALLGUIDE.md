@@ -5,6 +5,7 @@
 - Ubuntu Versión 18.04 u otro sistema operativo capaz de soportar ROS Melodic Morenia
 - Acceso a internet
 - Por lo menos 54 MB de espacio libre para los archivos de UDROBOT, además de lo requerido para ROS Melodic Morenia
+- 2 GB o más de memoria RAM
 
 ## 2. Instalación
 
